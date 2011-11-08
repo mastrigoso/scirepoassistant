@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:style src="resources/css/HeaderStylesheet.css" />
+	
+	<g:HTMLPanel>
+	
+		<g:HorizontalPanel>
+	
+			<g:Anchor href="http://www.w3.org/WAI/WCAG1AA-Conformance" 
+					title="Explanation of Level Double-A Conformance" 
+					ui:field="wcagLink">
+			</g:Anchor>
+
+			<g:HorizontalPanel styleName="{style.footerLinks}">
+			
+				<g:Anchor href="#" 
+					title="Datos de contacto" HTML="Contacto" />
+	          	<g:Label text="|" />
+	          	<g:Anchor href="#" 
+					title="Información de privacidad" HTML="Privacidad"/>
+	          	<g:Label text="|" />
+	          	<g:Anchor href="#" 
+					title="Acerca de" HTML="Acerca de"/>
+					
+        	</g:HorizontalPanel>
+        	
+        </g:HorizontalPanel>
+        
+	</g:HTMLPanel>
+	
+</ui:UiBinder> 

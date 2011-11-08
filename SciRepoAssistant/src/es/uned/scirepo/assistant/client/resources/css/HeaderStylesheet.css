@@ -1,0 +1,18 @@
+.headerTitle{
+	color: Navy;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.footerLinks {
+  	margin-left: 500px;
+  	padding: 10px;
+  	text-align: right;
+}
+
+.loginGrid {
+  	padding: 10px;
+}
