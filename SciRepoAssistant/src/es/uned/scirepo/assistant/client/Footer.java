@@ -21,6 +21,10 @@ public class Footer extends Composite {
 	interface FooterUiBinder extends UiBinder<Widget, Footer> {
 	}
 
+	static{
+		AppResources.RESOURCE.footerCSS().ensureInjected();
+	}
+	
 	public Footer() {
 		initWidget(uiBinder.createAndBindUi(this));
 		Image wcagImage = new Image(AppResources.RESOURCE.wcag());

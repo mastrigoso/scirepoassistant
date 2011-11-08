@@ -13,7 +13,7 @@ public class SciRepoAssistant implements EntryPoint {
 	 */
 	public void onModuleLoad() {
 		final Layout index = new Layout();
-
+		
 		// Add the nameField and sendButton to the RootPanel
 		// Use RootPanel.get() to get the entire body element
 		RootPanel.get("root").add(index);

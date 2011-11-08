@@ -1,4 +1,8 @@
-.headerTitle{
+.logo{
+	margin: 3px;
+}
+
+.title{
 	color: Navy;
 	font-size: 18px;
 	font-style: normal;
@@ -7,12 +11,10 @@
 	margin-right: 10px;
 }
 
-.footerLinks {
-  	margin-left: 500px;
-  	padding: 10px;
-  	text-align: right;
+.grid {
+  	margin: 3px;
 }
 
-.loginGrid {
-  	padding: 10px;
+.loginPanel {
+  	margin-right: 15px;
 }

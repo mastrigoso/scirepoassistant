@@ -2,7 +2,7 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	
-	<ui:style src="resources/css/HeaderStylesheet.css" />
+	<ui:with field='res' type='es.uned.scirepo.assistant.client.resources.AppResources'/>
 	
 	<g:HTMLPanel>
 	
@@ -13,7 +13,7 @@
 					ui:field="wcagLink">
 			</g:Anchor>
 
-			<g:HorizontalPanel styleName="{style.footerLinks}">
+			<g:HorizontalPanel styleName="{res.footerCSS.footerLinks}">
 			
 				<g:Anchor href="#" 
 					title="Datos de contacto" HTML="Contacto" />

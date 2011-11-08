@@ -3,20 +3,11 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
 	xmlns:p1="urn:import:es.uned.scirepo.assistant.client">
 	
-	<ui:style src="resources/css/HeaderStylesheet.css" />
-	
 	<g:HTMLPanel>
 	
 		<p1:Header width="100%"/>
 		
-		<g:HorizontalPanel spacing="3" borderWidth="3" width="100%">
-			<g:VerticalPanel>
-				<g:Label text="Crear cuenta"/>
-			</g:VerticalPanel>
-			<g:VerticalPanel>
-				<g:Label text="Realizar búsqueda"/>
-			</g:VerticalPanel>			
-		</g:HorizontalPanel>
+		<p1:Index width="100%" />
 		
 		<p1:Footer width="100%" />
 		

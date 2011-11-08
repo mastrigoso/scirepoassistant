@@ -7,20 +7,20 @@ import com.google.gwt.user.client.ui.Widget;
 
 import es.uned.scirepo.assistant.client.resources.AppResources;
 
+public class Index extends Composite {
 
-public class Header extends Composite {
+	private static IndexUiBinder uiBinder = GWT.create(IndexUiBinder.class);
 
-	private static HeaderUiBinder uiBinder = GWT.create(HeaderUiBinder.class);
-	
-	interface HeaderUiBinder extends UiBinder<Widget, Header> {
+	interface IndexUiBinder extends UiBinder<Widget, Index> {
 	}
 	
 	static{
-		AppResources.RESOURCE.headerCSS().ensureInjected();
+		AppResources.RESOURCE.buttonCSS().ensureInjected();
 	}
 	
-	public Header() {
+	public Index() {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
+	
 }

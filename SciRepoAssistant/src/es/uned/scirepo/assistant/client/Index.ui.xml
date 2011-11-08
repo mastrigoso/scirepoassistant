@@ -1,0 +1,54 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:with field='res' type='es.uned.scirepo.assistant.client.resources.AppResources'/>
+    
+	<g:HorizontalPanel spacing="3" borderWidth="3" width="100%">
+		<g:Cell width="200px">
+			<g:VerticalPanel width="200px" height="0">
+			<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+				<g:VerticalPanel>
+				<g:Label text="Crear una nueva cuenta"/>
+				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >
+					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="Crear un nuevo usuario" pixelSize="120,40" text="Registrar" />
+				</g:Cell>
+				</g:VerticalPanel>
+			</g:Cell>
+			<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+				<g:VerticalPanel>
+				<g:Label text="Conectar mediante un proveedor" width="192px"/>
+				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >
+					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="Conectar mediante GMail" pixelSize="120,40" >
+						<g:upFace image="{res.googleLogo}" />
+						<g:downFace image="{res.googleLogo}" />
+					</g:PushButton>
+				</g:Cell>
+				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="Conectar mediante Twitter" width="120px" height="40px">
+						<g:upFace image="{res.twitterLogo}" />
+						<g:downFace image="{res.twitterLogo}" />
+					</g:PushButton>
+				</g:Cell>
+				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="Conectar mediante Facebook" width="120px" height="40px">
+						<g:upFace image="{res.facebookLogo}" />
+						<g:downFace image="{res.facebookLogo}" />
+					</g:PushButton>
+				</g:Cell>
+				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="Conectar mediante LinkedIn" width="120px" height="40px">
+						<g:upFace image="{res.linkedinLogo}" />
+						<g:downFace image="{res.linkedinLogo}" />
+					</g:PushButton>
+				</g:Cell>
+			</g:VerticalPanel>
+			</g:Cell>
+		</g:VerticalPanel>
+		</g:Cell>
+		<g:VerticalPanel>
+			<g:Label text="Realizar búsqueda"/>
+		</g:VerticalPanel>			
+	</g:HorizontalPanel>
+		
+</ui:UiBinder> 
