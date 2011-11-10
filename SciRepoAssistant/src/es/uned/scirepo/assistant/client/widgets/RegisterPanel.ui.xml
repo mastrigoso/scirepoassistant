@@ -5,17 +5,21 @@
 	<ui:with field='res' type='es.uned.scirepo.assistant.client.resources.AppResources'/>
 
 	<g:VerticalPanel>
-			<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
-				<g:VerticalPanel>
-				<g:Label text="Crear una nueva cuenta"/>
+		<g:Cell width="100%" horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+			<g:VerticalPanel>
+				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >
+					<g:Label text="Crear una nueva cuenta"/>
+				</g:Cell>
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >
 					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="Crear un nuevo usuario" pixelSize="120,40" text="Registrar" />
 				</g:Cell>
-				</g:VerticalPanel>
-			</g:Cell>
-			<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
-				<g:VerticalPanel>
-				<g:Label text="Conectar mediante un proveedor" width="192px"/>
+			</g:VerticalPanel>
+		</g:Cell>
+		<g:Cell width="100%"  horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+			<g:VerticalPanel>
+				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >
+					<g:Label text="Conectar mediante un proveedor" width="192px"/>
+				</g:Cell>
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >
 					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="Conectar mediante GMail" pixelSize="120,40" >
 						<g:upFace image="{res.googleLogo}" />
@@ -41,7 +45,7 @@
 					</g:PushButton>
 				</g:Cell>
 			</g:VerticalPanel>
-			</g:Cell>
+		</g:Cell>
 	</g:VerticalPanel>
 		
 </ui:UiBinder> 
