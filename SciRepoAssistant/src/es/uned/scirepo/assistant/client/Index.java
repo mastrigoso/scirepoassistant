@@ -5,8 +5,6 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
-import es.uned.scirepo.assistant.client.resources.AppResources;
-
 public class Index extends Composite {
 
 	private static IndexUiBinder uiBinder = GWT.create(IndexUiBinder.class);
@@ -14,13 +12,8 @@ public class Index extends Composite {
 	interface IndexUiBinder extends UiBinder<Widget, Index> {
 	}
 	
-	static{
-		AppResources.RESOURCE.buttonCSS().ensureInjected();
-	}
-	
 	public Index() {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
-	
 }
