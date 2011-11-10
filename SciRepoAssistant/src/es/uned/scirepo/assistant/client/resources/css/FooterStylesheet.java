@@ -6,4 +6,5 @@ public interface FooterStylesheet extends CssResource {
 	 
 	 String footerLinks();
 	 
+	 String footerWCAGButton();
 }

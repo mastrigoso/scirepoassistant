@@ -18,6 +18,15 @@ public interface AppResources extends ClientBundle {
 	@Source(value="es/uned/scirepo/assistant/client/resources/images/login-icon.jpg")
 	ImageResource loginIcon();
 	
+	@Source(value="es/uned/scirepo/assistant/client/resources/images/wcag1AA.png")
+	ImageResource wcagIcon();
+	
+	@Source(value="es/uned/scirepo/assistant/client/resources/images/xhtml-icon.gif")
+	ImageResource xhtmlIcon();
+	
+	@Source(value="es/uned/scirepo/assistant/client/resources/images/css-icon.jpg")
+	ImageResource cssIcon();
+	
 	@Source(value="es/uned/scirepo/assistant/client/resources/images/facebook.jpeg")
 	ImageResource facebookLogo();
 	
@@ -30,9 +39,6 @@ public interface AppResources extends ClientBundle {
 	@Source(value="es/uned/scirepo/assistant/client/resources/images/linkedin.png")
 	ImageResource linkedinLogo();
 	
-	@Source(value="es/uned/scirepo/assistant/client/resources/images/wcag1AA.png")
-	ImageResource wcag();
-	
 	@Source(value="es/uned/scirepo/assistant/client/resources/css/HeaderStylesheet.css")
 	HeaderStylesheet headerCSS();
 	
@@ -41,5 +47,8 @@ public interface AppResources extends ClientBundle {
 
 	@Source("es/uned/scirepo/assistant/client/resources/css/ButtonStylesheet.css")
 	ButtonStylesheet buttonCSS();
+
+	@Source("es/uned/scirepo/assistant/client/resources/css/ButtonStylesheet.css")
+	es.uned.scirepo.assistant.client.resources.css.ButtonStylesheet buttonStylesheet();
 	
 }
