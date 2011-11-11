@@ -11,11 +11,18 @@
 				<p1:RegisterPanel addStyleNames="{res.panelCSS.paddingPanel}" />
 			</g:DecoratorPanel>			
 		</g:Cell>
-		<g:Cell>
-			<g:DecoratorPanel addStyleNames="{res.panelCSS.marginPanel} {res.panelCSS.paddingPanel}">
-				<p1:SimpleSearchPanel addStyleNames="{res.panelCSS.paddingPanel}" />
-			</g:DecoratorPanel>
-		</g:Cell>			
+		<g:TabPanel ui:field="searchTab">
+			<g:Tab text="Búsqueda simple" >
+				<g:DecoratorPanel addStyleNames="{res.panelCSS.marginPanel} {res.panelCSS.paddingPanel}">
+					<p1:SimpleSearchPanel addStyleNames="{res.panelCSS.paddingPanel}" />
+				</g:DecoratorPanel>
+			</g:Tab>
+			<g:Tab text="Búsqueda avanzada">
+				<g:DecoratorPanel addStyleNames="{res.panelCSS.marginPanel} {res.panelCSS.paddingPanel}">
+					<p1:ComplexSearchPanel addStyleNames="{res.panelCSS.paddingPanel}" />
+				</g:DecoratorPanel>
+			</g:Tab>
+		</g:TabPanel>		
 	</g:HorizontalPanel>
 		
 </ui:UiBinder> 
