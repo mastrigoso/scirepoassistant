@@ -7,6 +7,7 @@ import com.google.gwt.resources.client.ImageResource;
 import es.uned.scirepo.assistant.client.resources.css.ButtonStylesheet;
 import es.uned.scirepo.assistant.client.resources.css.FooterStylesheet;
 import es.uned.scirepo.assistant.client.resources.css.HeaderStylesheet;
+import es.uned.scirepo.assistant.client.resources.css.PanelStylesheet;
 
 public interface AppResources extends ClientBundle {
 
@@ -49,6 +50,9 @@ public interface AppResources extends ClientBundle {
 	ButtonStylesheet buttonCSS();
 
 	@Source("es/uned/scirepo/assistant/client/resources/css/ButtonStylesheet.css")
-	es.uned.scirepo.assistant.client.resources.css.ButtonStylesheet buttonStylesheet();
+	ButtonStylesheet buttonStylesheet();
+
+	@Source("es/uned/scirepo/assistant/client/resources/css/PanelStylesheet.css")
+	PanelStylesheet panelCSS();
 	
 }

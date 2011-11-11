@@ -3,13 +3,19 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui"
 	xmlns:p1="urn:import:es.uned.scirepo.assistant.client.widgets" >
 	
+	<ui:with field='res' type='es.uned.scirepo.assistant.client.resources.AppResources'/>
+	
 	<g:HorizontalPanel>
-		<g:Cell width="200px">
-			<p1:RegisterPanel />
+		<g:Cell width="220px">
+			<g:DecoratorPanel addStyleNames="{res.panelCSS.marginPanel} {res.panelCSS.paddingPanel}">
+				<p1:RegisterPanel addStyleNames="{res.panelCSS.paddingPanel}" />
+			</g:DecoratorPanel>			
 		</g:Cell>
-		<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
-			<p1:SimpleSearchPanel />
-		</g:Cell>
+		<g:Cell>
+			<g:DecoratorPanel addStyleNames="{res.panelCSS.marginPanel} {res.panelCSS.paddingPanel}">
+				<p1:SimpleSearchPanel addStyleNames="{res.panelCSS.paddingPanel}" />
+			</g:DecoratorPanel>
+		</g:Cell>			
 	</g:HorizontalPanel>
 		
 </ui:UiBinder> 
