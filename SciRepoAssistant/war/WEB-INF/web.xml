@@ -11,5 +11,13 @@
   <welcome-file-list>
     <welcome-file>SciRepoAssistant.html</welcome-file>
   </welcome-file-list>
+  <servlet>
+  	<servlet-name>AreaService</servlet-name>
+  	<servlet-class>es.uned.scirepo.assistant.server.services.AreaServiceImpl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AreaService</servlet-name>
+  	<url-pattern>/scirepoassistant/AreaService</url-pattern>
+  </servlet-mapping>
 
 </web-app>
