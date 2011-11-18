@@ -5,6 +5,8 @@
 	
 	<ui:with field='res' type='es.uned.scirepo.assistant.client.resources.AppResources'/>
 	
+	<ui:with field='msg' type='es.uned.scirepo.assistant.client.resources.messages.FooterMessages'/>
+	
 	<g:HTMLPanel>
 		<g:HorizontalPanel width="100%">
 			<g:Cell horizontalAlignment="ALIGN_LEFT" verticalAlignment="ALIGN_MIDDLE">
@@ -12,24 +14,24 @@
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
 					<g:SimplePanel styleName="{res.footerCSS.footerWCAGButton}" >
 						<p1:ImageAnchor href="http://validator.w3.org/check/referer" 
-							title="XHTML Validation" resource="{res.xhtmlIcon}" 
-							imageAlt="XHTML Conformity" >
+							title="{msg.xhtmlAnchorTitle}" resource="{res.xhtmlIcon}" 
+							imageAlt="{msg.xhtmlAnchorAlt}" >
 						</p1:ImageAnchor>
 					</g:SimplePanel>
 				</g:Cell>
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
 					<g:SimplePanel styleName="{res.footerCSS.footerWCAGButton}" >
 						<p1:ImageAnchor href="http://jigsaw.w3.org/css-validator/check/referer" 
-							title="CSS Validation" resource="{res.cssIcon}" 
-							imageAlt="CSS Conformity" >
+							title="{msg.cssAnchorTitle}" resource="{res.cssIcon}" 
+							imageAlt="{msg.cssAnchorAlt}" >
 						</p1:ImageAnchor>
 					</g:SimplePanel>
 				</g:Cell>
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
 					<g:SimplePanel styleName="{res.footerCSS.footerWCAGButton}">			
 						<p1:ImageAnchor href="http://www.w3.org/WAI/WCAG1AA-Conformance" 
-							title="Explanation of Level Double-A Conformance" resource="{res.wcagIcon}" 
-							imageAlt="Level Double-A conformance icon, W3C-WAI Web Content Accessibility Guidelines 1.0" >
+							title="{msg.wcagAnchorTitle}" resource="{res.wcagIcon}" 
+							imageAlt="{msg.wcagAnchorAlt}" >
 						</p1:ImageAnchor>	
 					</g:SimplePanel>
 				</g:Cell>
@@ -39,13 +41,13 @@
 			<g:Cell horizontalAlignment="ALIGN_RIGHT" verticalAlignment="ALIGN_MIDDLE">
 				<g:HorizontalPanel styleName="{res.footerCSS.footerLinks}" horizontalAlignment="ALIGN_RIGHT">
 					<g:Anchor href="#" 
-						title="Datos de contacto" HTML="Contacto" />
+						title="{msg.contactAnchorTitle}" HTML="{msg.contactAnchorText}" />
 		          	<g:Label text="&nbsp;|&nbsp;" />
 		          	<g:Anchor href="#" 
-						title="Información de privacidad" HTML="Privacidad"/>
+						title="{msg.privacityAnchorTitle}" HTML="{msg.privacityAnchorText}"/>
 		          	<g:Label text="&nbsp;|&nbsp;" />
 		          	<g:Anchor href="#" 
-						title="Acerca de" HTML="Acerca de"/>
+						title="{msg.aboutAnchorTitle}" HTML="{msg.aboutAnchorText}"/>
 	        	</g:HorizontalPanel>
         	</g:Cell>
         	

@@ -1,3 +1,11 @@
-#Mon Nov 07 11:52:53 CET 2011
+#Fri Nov 18 11:31:18 CET 2011
 eclipse.preferences.version=1
+encoding//src/es/uned/scirepo/assistant/client/resources/messages/FooterMessages_en.properties=UTF-8
+encoding//src/es/uned/scirepo/assistant/client/resources/messages/FooterMessages_es.properties=UTF-8
+encoding//src/es/uned/scirepo/assistant/client/resources/messages/HeaderMessages_en.properties=UTF-8
+encoding//src/es/uned/scirepo/assistant/client/resources/messages/HeaderMessages_es.properties=UTF-8
+encoding//src/es/uned/scirepo/assistant/client/resources/messages/RegisterMessages_en.properties=UTF-8
+encoding//src/es/uned/scirepo/assistant/client/resources/messages/RegisterMessages_es.properties=UTF-8
+encoding//src/es/uned/scirepo/assistant/client/resources/messages/SearchPanelMessages_en.properties=UTF-8
+encoding//src/es/uned/scirepo/assistant/client/resources/messages/SearchPanelMessages_es.properties=UTF-8
 encoding/<project>=UTF-8

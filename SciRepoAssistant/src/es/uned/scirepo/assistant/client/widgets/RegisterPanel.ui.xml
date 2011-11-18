@@ -4,42 +4,45 @@
 
 	<ui:with field='res' type='es.uned.scirepo.assistant.client.resources.AppResources'/>
 
+	<ui:with field='msg' type='es.uned.scirepo.assistant.client.resources.messages.RegisterMessages'/>
+
 	<g:VerticalPanel>
 		<g:Cell width="100%" horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
 			<g:VerticalPanel>
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >
-					<g:Label text="Crear una nueva cuenta"/>
+					<g:Label text="{msg.createAccountText}"/>
 				</g:Cell>
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >
-					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="Crear un nuevo usuario" pixelSize="120,40" text="Registrar" />
+					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" 
+						title="{msg.registerButtonTitle}" text="{msg.registerButtonText}" />
 				</g:Cell>
 			</g:VerticalPanel>
 		</g:Cell>
 		<g:Cell width="100%"  horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
 			<g:VerticalPanel>
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >
-					<g:Label text="Conectar mediante un proveedor" width="192px"/>
+					<g:Label text="{msg.connectText}" width="192px"/>
 				</g:Cell>
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >
-					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="Conectar mediante GMail" pixelSize="120,40" >
+					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="{msg.gmailText}" width="120px" height="40px">
 						<g:upFace image="{res.googleLogo}" />
 						<g:downFace image="{res.googleLogo}" />
 					</g:PushButton>
 				</g:Cell>
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
-					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="Conectar mediante Twitter" width="120px" height="40px">
+					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="{msg.twitterText}" width="120px" height="40px">
 						<g:upFace image="{res.twitterLogo}" />
 						<g:downFace image="{res.twitterLogo}" />
 					</g:PushButton>
 				</g:Cell>
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
-					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="Conectar mediante Facebook" width="120px" height="40px">
+					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="{msg.facebookText}" width="120px" height="40px">
 						<g:upFace image="{res.facebookLogo}" />
 						<g:downFace image="{res.facebookLogo}" />
 					</g:PushButton>
 				</g:Cell>
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
-					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="Conectar mediante LinkedIn" width="120px" height="40px">
+					<g:PushButton addStyleNames="{res.buttonCSS.imageButton}" title="{msg.linkedinText}" width="120px" height="40px">
 						<g:upFace image="{res.linkedinLogo}" />
 						<g:downFace image="{res.linkedinLogo}" />
 					</g:PushButton>

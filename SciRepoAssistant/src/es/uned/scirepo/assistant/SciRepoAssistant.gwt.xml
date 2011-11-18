@@ -13,8 +13,18 @@
 
   <!-- Other module inherits                                      -->
 
+  <inherits name="com.google.gwt.i18n.I18N"/>
+
+  <!-- Spanish in Spain -->
+  <extend-property name="locale" values="es"/>
+  
+  <!-- English language, independent of country -->
+  <extend-property name="locale" values="en"/>
+
+  <set-property-fallback name="locale" value="en" />
+
   <!-- Specify the app entry point class.                         -->
-  <entry-point class='es.uned.scirepo.assistant.client.SciRepoAssistant'/>
+  <entry-point class='es.uned.scirepo.assistant.client.SciRepoAssistant'/>  
 
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>

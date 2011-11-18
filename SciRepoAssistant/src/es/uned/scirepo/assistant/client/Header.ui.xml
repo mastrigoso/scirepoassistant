@@ -5,13 +5,16 @@
 
 	<ui:with field='res' type='es.uned.scirepo.assistant.client.resources.AppResources'/>
 	
+	<ui:with field='msg' type='es.uned.scirepo.assistant.client.resources.messages.HeaderMessages'/>
+	
 	<g:HTMLPanel>
 		<g:HorizontalPanel horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" width="100%">
 			<g:Cell width="220px">
-				<g:Image resource="{res.logo}" addStyleNames="{res.headerCSS.logo}" />
+				<g:Image resource="{res.logo}" addStyleNames="{res.headerCSS.logo}" 
+					altText="{msg.unedImageAlt}" title="{msg.unedImageTitle}" />
 			</g:Cell>
 			<g:Cell>
-				<g:Label text="Buscador de artículos científicos" 
+				<g:Label text="{msg.appTitle}" 
 					addStyleNames="{res.headerCSS.title}" />
 			</g:Cell>
 			<g:Cell width="350px">
@@ -20,7 +23,7 @@
 						<g:Grid addStyleNames="{res.headerCSS.grid}">
 							<g:row>
 								<g:customCell>
-									<g:Label text="Correo: " width="70px"/>
+									<g:Label text="{msg.loginMailText}" width="70px"/>
 								</g:customCell>
 								<g:customCell>
 									<g:TextBox width="140px"/>
@@ -28,7 +31,7 @@
 							</g:row>
 							<g:row>
 								<g:customCell>
-									<g:Label text="Contraseña: " width="70px"/>
+									<g:Label text="{msg.loginPassText}" width="70px"/>
 								</g:customCell>
 								<g:customCell>
 									<g:PasswordTextBox width="140px"/>
@@ -37,7 +40,7 @@
 						</g:Grid>
 					</g:Cell>
 					<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >
-						<p1:ImageButton resource="{res.loginIcon}" width="100px" text="Entrar" />
+						<p1:ImageButton resource="{res.loginIcon}" width="100px" text="{msg.loginButtonText}" />
 					</g:Cell>
 				</g:HorizontalPanel>
 			</g:Cell>

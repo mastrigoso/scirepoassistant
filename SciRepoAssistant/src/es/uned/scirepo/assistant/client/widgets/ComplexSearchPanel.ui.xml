@@ -1,23 +1,31 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
-	xmlns:p1="urn:import:com.google.gwt.user.datepicker.client">
+	xmlns:p1="urn:import:com.google.gwt.user.datepicker.client"
+	xmlns:p2="urn:import:es.uned.scirepo.assistant.client.widgets">
+	
+	<ui:with field='res' type='es.uned.scirepo.assistant.client.resources.AppResources'/>
+	
+	<ui:with field='msg' type='es.uned.scirepo.assistant.client.resources.messages.SearchPanelMessages'/>
 	
 	<g:VerticalPanel width="100%">
 		
 		<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
 			<g:HorizontalPanel width="100%">
 				<g:Cell verticalAlignment="ALIGN_MIDDLE">
-					<g:Label text="Fecha de inicio: " horizontalAlignment="ALIGN_LEFT"/>
+					<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.initDateLabel}" />
 				</g:Cell>
 				<g:Cell verticalAlignment="ALIGN_MIDDLE">
 					<p1:DateBox/>
 				</g:Cell>
 				<g:Cell verticalAlignment="ALIGN_MIDDLE">
-					<g:Label text="Fecha de fin: " horizontalAlignment="ALIGN_LEFT"/>
+					<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.endDateLabel}"/>
 				</g:Cell>
 				<g:Cell verticalAlignment="ALIGN_MIDDLE">
 					<p1:DateBox/>
+				</g:Cell>
+				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >	
+					<p2:ImageButton resource="{res.searchIcon}" width="100px" text="{msg.searchButtonText}" />
 				</g:Cell>
 			</g:HorizontalPanel>
 		</g:Cell>
@@ -323,4 +331,4 @@
 		
 	</g:VerticalPanel>
 	
-</ui:UiBinder> 
+</ui:UiBinder>  

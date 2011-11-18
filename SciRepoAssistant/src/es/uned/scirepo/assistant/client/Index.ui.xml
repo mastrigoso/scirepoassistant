@@ -5,6 +5,8 @@
 	
 	<ui:with field='res' type='es.uned.scirepo.assistant.client.resources.AppResources'/>
 	
+	<ui:with field='msg' type='es.uned.scirepo.assistant.client.resources.messages.SearchPanelMessages'/>
+	
 	<g:HorizontalPanel>
 		<g:Cell width="220px">
 			<g:DecoratorPanel addStyleNames="{res.panelCSS.marginPanel} {res.panelCSS.paddingPanel}">
@@ -12,12 +14,12 @@
 			</g:DecoratorPanel>			
 		</g:Cell>
 		<g:TabPanel ui:field="searchTab">
-			<g:Tab text="Búsqueda simple" >
+			<g:Tab text="{msg.simpleSearchTagTitle}" >
 				<g:DecoratorPanel addStyleNames="{res.panelCSS.marginPanel} {res.panelCSS.paddingPanel}">
 					<p1:SimpleSearchPanel addStyleNames="{res.panelCSS.paddingPanel}" />
 				</g:DecoratorPanel>
 			</g:Tab>
-			<g:Tab text="Búsqueda avanzada">
+			<g:Tab text="{msg.complexSearchTagTitle}">
 				<g:DecoratorPanel addStyleNames="{res.panelCSS.marginPanel} {res.panelCSS.paddingPanel}">
 					<p1:ComplexSearchPanel addStyleNames="{res.panelCSS.paddingPanel}" />
 				</g:DecoratorPanel>
