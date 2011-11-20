@@ -31,6 +31,10 @@ public class Area implements Serializable {
 		this("", new ArrayList<Category>());
 	}
 	
+	public Area(String description){
+		this(description, new ArrayList<Category>());
+	}
+	
 	public Area(String description, List<Category> categories) {
 		super();
 		this.description = description;

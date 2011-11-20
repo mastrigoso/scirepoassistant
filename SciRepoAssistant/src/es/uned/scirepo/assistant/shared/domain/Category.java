@@ -34,6 +34,10 @@ public class Category implements Serializable{
 		this("", "", new ArrayList<Category>());
 	}
 	
+	public Category(String description){
+		this(description, description, new ArrayList<Category>());
+	}
+	
 	public Category(String description, String tag, List<Category> subcategories) {
 		super();
 		this.description = description;
