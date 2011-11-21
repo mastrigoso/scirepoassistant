@@ -1,16 +1,17 @@
 package es.uned.scirepo.assistant.client.widgets;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.DisclosurePanel;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.StackPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
@@ -31,48 +32,61 @@ public class SimpleSearchPanel extends Composite {
 			UiBinder<Widget, SimpleSearchPanel> {
 	}
 
-	@UiField 
-	StackPanel areasStack;
+	@UiField StackPanel areasStack;
+	
+	@UiField ImageButton searchButton;
+	
+	private List<CategoryStackField> categories = new ArrayList<CategoryStackField>();
 	
 	public SimpleSearchPanel() {
 		initWidget(uiBinder.createAndBindUi(this));
+		searchButton.addClickHandler(new ClickHandler() {
+			
+			@Override
+			public void onClick(ClickEvent event) {
+				List<String> tags = getTagsSelected();
+				String msg = "Tags para buscar : \n";
+				for(String tag : tags) {
+					msg += "\"" + tag + "\"\n";
+				}
+				Window.alert(msg);
+			}
+		});
+		
 		areaService.getAllAreas(new AsyncCallback<List<Area>>() {
 			
 			@Override
 			public void onSuccess(List<Area> result) {
 				for(Area area : result) {
-					areasStack.add(createAreaItem(area), area.getDescription(), true);
+					
+					VerticalPanel item = new VerticalPanel();
+					
+					for(Category category : area.getCategories()) {			
+						CategoryStackField widget = new CategoryStackField(category);
+						categories.add(widget);
+						item.add(widget);
+						item.setCellHorizontalAlignment(widget, HasHorizontalAlignment.ALIGN_LEFT);
+					}
+					
+					areasStack.add(item, area.getDescription(), true);
 				}
 				
 			}
 
 			@Override
 			public void onFailure(Throwable caught) {
-				Window.alert("Error recueprando las áreas disponibles");
+				Window.alert("Error recuperando las áreas disponibles");
 			}
 		});
 		
 	}
 	
-	private VerticalPanel createAreaItem(Area area) {
-		VerticalPanel item = new VerticalPanel();
-		
-		for(Category category : area.getCategories()) {
-			DisclosurePanel disclosurePanel = new DisclosurePanel(category.getDescription());
-			disclosurePanel.add(createCategoryItem(category));
-			item.add(disclosurePanel);
-			item.setCellHorizontalAlignment(disclosurePanel, HasHorizontalAlignment.ALIGN_LEFT);
+	private List<String> getTagsSelected(){
+		List<String> tags = new ArrayList<String>();
+		for(CategoryStackField category : categories) {
+			tags.addAll(category.getSearchSelectedTags());
 		}
-		
-		return item;
-	}
-
-	private VerticalPanel createCategoryItem(Category category) {
-		VerticalPanel item = new VerticalPanel();
-		for(Category subcategory: category.getSubcategories()) {
-			item.add(new Label(subcategory.getDescription()));
-		}
-		return item;
+		return tags;
 	}
 
 }

@@ -25,7 +25,8 @@
 					<p1:DateBox/>
 				</g:Cell>
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >	
-					<p2:ImageButton resource="{res.searchIcon}" width="100px" text="{msg.searchButtonText}" />
+					<p2:ImageButton ui:field="searchButton" resource="{res.searchIcon}" 
+						width="100px" text="{msg.searchButtonText}" />
 				</g:Cell>
 			</g:HorizontalPanel>
 		</g:Cell>
