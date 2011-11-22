@@ -18,7 +18,6 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.datepicker.client.DateBox;
-import com.google.gwt.user.datepicker.client.DateBox.Format;
 
 import es.uned.scirepo.assistant.client.format.CustomDateFormats;
 import es.uned.scirepo.assistant.client.services.AreaService;
@@ -32,9 +31,6 @@ public class SimpleSearchPanel extends Composite {
 			.create(SimpleSearchPanelUiBinder.class);
 
 	private static AreaServiceAsync areaService = AreaService.Util.getInstance();
-	
-	private static Format dateFormat = new DateBox.DefaultFormat(
-			CustomDateFormats.SHORT_WITH_CENTURY.getFormat());
 
 	interface SimpleSearchPanelUiBinder extends
 			UiBinder<Widget, SimpleSearchPanel> {
@@ -49,8 +45,8 @@ public class SimpleSearchPanel extends Composite {
 	
 	public SimpleSearchPanel() {
 		initWidget(uiBinder.createAndBindUi(this));
-		dateInit.setFormat(dateFormat);
-		dateEnd.setFormat(dateFormat);
+		dateInit.setFormat(CustomDateFormats.SHORT_WITH_CENTURY.getDateBoxFormat());
+		dateEnd.setFormat(CustomDateFormats.SHORT_WITH_CENTURY.getDateBoxFormat());
 		dateEnd.setValue(new Date());
 				
 		searchButton.addClickHandler(new ClickHandler() {

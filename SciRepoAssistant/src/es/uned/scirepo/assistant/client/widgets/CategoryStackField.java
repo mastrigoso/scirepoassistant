@@ -35,6 +35,7 @@ public class CategoryStackField extends Composite implements ClickHandler{
 		
 		if(category.getSubcategories().size()>0) {
 			DisclosurePanel disclosurePanel = new DisclosurePanel(category.getDescription());
+			disclosurePanel.setTitle(category.getDescription());
 			VerticalPanel internalPanel = new VerticalPanel();
 			internalPanel.getElement().getStyle().setWidth(100, Unit.PCT);
 			for(Category subcategory : category.getSubcategories()) {
@@ -47,9 +48,11 @@ public class CategoryStackField extends Composite implements ClickHandler{
 			panel.setCellHorizontalAlignment(disclosurePanel, HasHorizontalAlignment.ALIGN_LEFT);
 		} else {
 			SimplePanel internalPanel = new SimplePanel();
-			internalPanel.getElement().getStyle().setMarginLeft(22, Unit.PX);
+			internalPanel.getElement().getStyle().setMarginLeft(23, Unit.PX);
 			internalPanel.getElement().getStyle().setWidth(100, Unit.PCT);
-			internalPanel.add(new Label(category.getDescription()));
+			Label label = new Label(category.getDescription());
+			label.setTitle(category.getDescription());
+			internalPanel.add(label);
 			panel.add(internalPanel);
 			panel.setCellHorizontalAlignment(internalPanel, HasHorizontalAlignment.ALIGN_LEFT);
 		}
