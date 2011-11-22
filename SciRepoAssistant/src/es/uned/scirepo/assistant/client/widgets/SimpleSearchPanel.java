@@ -9,12 +9,13 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
+import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.StackPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 
 import es.uned.scirepo.assistant.client.services.AreaService;
 import es.uned.scirepo.assistant.client.services.AreaServiceAsync;
@@ -32,7 +33,7 @@ public class SimpleSearchPanel extends Composite {
 			UiBinder<Widget, SimpleSearchPanel> {
 	}
 
-	@UiField StackPanel areasStack;
+	@UiField SimplePanel areasStackPanel;
 	
 	@UiField ImageButton searchButton;
 	
@@ -57,6 +58,10 @@ public class SimpleSearchPanel extends Composite {
 			
 			@Override
 			public void onSuccess(List<Area> result) {
+				
+				StackPanel areasStack = new StackPanel();
+				areasStack.setWidth("100%");
+				
 				for(Area area : result) {
 					
 					VerticalPanel item = new VerticalPanel();
@@ -71,6 +76,7 @@ public class SimpleSearchPanel extends Composite {
 					areasStack.add(item, area.getDescription(), true);
 				}
 				
+				areasStackPanel.setWidget(areasStack);
 			}
 
 			@Override

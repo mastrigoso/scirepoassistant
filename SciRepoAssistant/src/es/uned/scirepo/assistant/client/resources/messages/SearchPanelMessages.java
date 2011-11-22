@@ -14,4 +14,6 @@ public interface SearchPanelMessages extends Messages {
 	
 	String searchButtonText();
 	
+	String loadingCategoriesText();
+	
 }

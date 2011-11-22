@@ -16,6 +16,9 @@ public interface AppResources extends ClientBundle {
 	@Source(value="es/uned/scirepo/assistant/client/resources/images/logo.gif")
 	ImageResource logo();
 	
+	@Source(value="es/uned/scirepo/assistant/client/resources/images/loading-icon.gif")
+	ImageResource loadingIcon();
+	
 	@Source(value="es/uned/scirepo/assistant/client/resources/images/login-icon.png")
 	ImageResource loginIcon();
 	

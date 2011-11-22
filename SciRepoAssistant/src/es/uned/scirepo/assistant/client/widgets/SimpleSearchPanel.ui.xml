@@ -32,8 +32,9 @@
 		</g:Cell>
 		
 		<g:Cell>
-		<g:StackPanel width="100%" ui:field="areasStack" >
-		</g:StackPanel>
+			<g:SimplePanel width="100%" ui:field="areasStackPanel" >
+				<p2:LoadingPanel text="{msg.loadingCategoriesText}" />
+			</g:SimplePanel>
 		</g:Cell>
 		
 	</g:VerticalPanel>
