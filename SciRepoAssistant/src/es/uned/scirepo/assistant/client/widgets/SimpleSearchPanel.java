@@ -1,6 +1,7 @@
 package es.uned.scirepo.assistant.client.widgets;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.google.gwt.core.client.GWT;
@@ -16,7 +17,10 @@ import com.google.gwt.user.client.ui.StackPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.datepicker.client.DateBox;
+import com.google.gwt.user.datepicker.client.DateBox.Format;
 
+import es.uned.scirepo.assistant.client.format.CustomDateFormats;
 import es.uned.scirepo.assistant.client.services.AreaService;
 import es.uned.scirepo.assistant.client.services.AreaServiceAsync;
 import es.uned.scirepo.assistant.shared.domain.Area;
@@ -29,18 +33,26 @@ public class SimpleSearchPanel extends Composite {
 
 	private static AreaServiceAsync areaService = AreaService.Util.getInstance();
 	
+	private static Format dateFormat = new DateBox.DefaultFormat(
+			CustomDateFormats.SHORT_WITH_CENTURY.getFormat());
+
 	interface SimpleSearchPanelUiBinder extends
 			UiBinder<Widget, SimpleSearchPanel> {
 	}
 
 	@UiField SimplePanel areasStackPanel;
-	
+	@UiField DateBox dateInit;
+	@UiField DateBox dateEnd;	
 	@UiField ImageButton searchButton;
 	
 	private List<CategoryStackField> categories = new ArrayList<CategoryStackField>();
 	
 	public SimpleSearchPanel() {
 		initWidget(uiBinder.createAndBindUi(this));
+		dateInit.setFormat(dateFormat);
+		dateEnd.setFormat(dateFormat);
+		dateEnd.setValue(new Date());
+				
 		searchButton.addClickHandler(new ClickHandler() {
 			
 			@Override

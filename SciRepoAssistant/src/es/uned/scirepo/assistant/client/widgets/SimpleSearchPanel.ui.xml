@@ -11,18 +11,18 @@
 	<g:VerticalPanel width="100%">
 		
 		<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
-			<g:HorizontalPanel width="100%">
+			<g:HorizontalPanel width="100%" addStyleNames="{res.panelCSS.paddingPanel}" >
 				<g:Cell verticalAlignment="ALIGN_MIDDLE">
 					<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.initDateLabel}" />
 				</g:Cell>
 				<g:Cell verticalAlignment="ALIGN_MIDDLE">
-					<p1:DateBox/>
+					<p1:DateBox ui:field="dateInit" title="{msg.initDateLabel}" />
 				</g:Cell>
 				<g:Cell verticalAlignment="ALIGN_MIDDLE">
 					<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.endDateLabel}"/>
 				</g:Cell>
 				<g:Cell verticalAlignment="ALIGN_MIDDLE">
-					<p1:DateBox/>
+					<p1:DateBox ui:field="dateEnd" title="{msg.endDateLabel}"/>
 				</g:Cell>
 				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >	
 					<p2:ImageButton ui:field="searchButton" resource="{res.searchIcon}" 

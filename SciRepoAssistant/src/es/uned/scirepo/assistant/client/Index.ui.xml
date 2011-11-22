@@ -14,7 +14,7 @@
 			</g:DecoratorPanel>			
 		</g:Cell>
 		<g:Cell>
-			<g:TabPanel ui:field="searchTab" width="100%">
+			<g:TabPanel ui:field="searchTab" width="100%" addStyleNames="{res.panelCSS.paddingPanel}">
 				<g:Tab text="{msg.simpleSearchTagTitle}" >
 					<g:DecoratorPanel addStyleNames="{res.panelCSS.marginPanel} {res.panelCSS.paddingPanel}">
 						<p1:SimpleSearchPanel addStyleNames="{res.panelCSS.paddingPanel}" />
