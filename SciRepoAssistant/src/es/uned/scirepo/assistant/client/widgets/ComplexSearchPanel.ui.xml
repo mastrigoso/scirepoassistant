@@ -10,31 +10,128 @@
 	
 	<g:VerticalPanel width="100%">
 		
-		<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+		<g:Cell horizontalAlignment="ALIGN_RIGHT" verticalAlignment="ALIGN_MIDDLE">
 			<g:HorizontalPanel width="100%" addStyleNames="{res.panelCSS.paddingPanel}" >
-				<g:Cell verticalAlignment="ALIGN_MIDDLE">
-					<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.initDateLabel}" />
-				</g:Cell>
-				<g:Cell verticalAlignment="ALIGN_MIDDLE">
-					<p1:DateBox/>
-				</g:Cell>
-				<g:Cell verticalAlignment="ALIGN_MIDDLE">
-					<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.endDateLabel}"/>
-				</g:Cell>
-				<g:Cell verticalAlignment="ALIGN_MIDDLE">
-					<p1:DateBox/>
-				</g:Cell>
-				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >	
+				<g:Cell horizontalAlignment="ALIGN_RIGHT" verticalAlignment="ALIGN_MIDDLE" >	
 					<p2:ImageButton ui:field="searchButton" resource="{res.searchIcon}" 
 						width="100px" text="{msg.searchButtonText}" />
 				</g:Cell>
 			</g:HorizontalPanel>
 		</g:Cell>
 		
-		<g:Cell>
-			<g:SimplePanel width="100%" ui:field="areasStackPanel" >
-				<p2:LoadingPanel text="{msg.loadingCategoriesText}" />
-			</g:SimplePanel>
+		<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE" >
+			<g:DisclosurePanel title="{msg.textFieldsLabel}" width="100%" open="true" >
+				<g:header>
+					<ui:text from="{msg.textFieldsLabel}" />
+				</g:header>
+				<g:Grid cellSpacing="5">
+					<g:row width="100%">
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.titleLabel}"/>
+						</g:customCell>	
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:TextBox ui:field="title" title="{msg.titleLabel}"/>
+						</g:customCell>
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.abstractLabel}"/>
+						</g:customCell>
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:TextBox ui:field="abstractText" title="{msg.abstractLabel}"/>
+						</g:customCell>	
+					</g:row>
+					<g:row width="100%">
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.commentsLabel}"/>
+						</g:customCell>	
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:TextBox ui:field="comments" title="{msg.commentsLabel}"/>
+						</g:customCell>
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.fullRecordLabel}"/>
+						</g:customCell>	
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:TextBox ui:field="record" title="{msg.fullRecordLabel}"/>
+						</g:customCell>
+					</g:row>
+				</g:Grid>
+			</g:DisclosurePanel>
+		</g:Cell>
+		
+		<g:Cell width="100%">
+			<g:DisclosurePanel title="{msg.publicationFieldsLabel}" width="100%" >
+				<g:header>
+					<ui:text from="{msg.publicationFieldsLabel}" />
+				</g:header>
+				<g:Grid cellSpacing="5">
+					<g:row width="100%">
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.authorLabel}" />
+						</g:customCell>
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:TextBox ui:field="author" title="{msg.authorLabel}"/>
+						</g:customCell>	
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.journalLabel}" />
+						</g:customCell>
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:TextBox ui:field="journal" title="{msg.journalLabel}"/>
+						</g:customCell>		
+					</g:row>
+					<g:row width="100%">
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.initDateLabel}" />
+						</g:customCell>	
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<p1:DateBox ui:field="dateInit" title="{msg.initDateLabel}" />
+						</g:customCell>
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.endDateLabel}"/>
+						</g:customCell>
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<p1:DateBox ui:field="dateEnd" title="{msg.endDateLabel}"/>
+						</g:customCell>				
+					</g:row>
+					<g:row width="100%">
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.citationsLabel}" />
+						</g:customCell>	
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<p1:DateBox ui:field="citations" title="{msg.citationsLabel}" />
+						</g:customCell>
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.idReport}"/>
+						</g:customCell>
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<p1:DateBox ui:field="idReport" title="{msg.idReport}"/>
+						</g:customCell>				
+					</g:row>
+					<g:row width="100%">
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.idArxiv}" />
+						</g:customCell>	
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<p1:DateBox ui:field="idArxiv" title="{msg.idArxiv}" />
+						</g:customCell>
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<g:Label horizontalAlignment="ALIGN_LEFT" text="{msg.doi}"/>
+						</g:customCell>
+						<g:customCell verticalAlignment="ALIGN_MIDDLE">
+							<p1:DateBox ui:field="doi" title="{msg.doi}"/>
+						</g:customCell>				
+					</g:row>
+				</g:Grid>
+			</g:DisclosurePanel>
+		</g:Cell>		
+
+		<g:Cell >
+			<g:DisclosurePanel title="{msg.categoriesLabel}" width="100%">
+				<g:header>
+					<ui:text from="{msg.categoriesLabel}" />
+				</g:header>
+				<g:SimplePanel ui:field="areasStackPanel" >
+					<p2:LoadingPanel text="{msg.loadingCategoriesText}" />
+				</g:SimplePanel>
+			</g:DisclosurePanel>
 		</g:Cell>
 		
 	</g:VerticalPanel>

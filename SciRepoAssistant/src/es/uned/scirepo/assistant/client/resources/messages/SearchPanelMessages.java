@@ -12,6 +12,32 @@ public interface SearchPanelMessages extends Messages {
 	
 	String endDateLabel();
 	
+	String titleLabel();
+	
+	String authorLabel();
+	
+	String journalLabel();
+	
+	String fullRecordLabel();
+	
+	String commentsLabel();
+	
+	String citationsLabel();
+	
+	String idReport();
+	
+	String idArxiv();
+	
+	String doi();
+	
+	String textFieldsLabel();
+	
+	String publicationFieldsLabel(); 
+	
+	String categoriesLabel();
+	
+	String abstractLabel();
+	
 	String searchButtonText();
 	
 	String loadingCategoriesText();
